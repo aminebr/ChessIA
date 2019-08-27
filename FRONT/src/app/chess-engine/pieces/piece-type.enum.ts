@@ -1,3 +1,3 @@
-export enum pieceType{
-    Bishop, King, Knight, Pawn, Queen, Rook
+export enum PieceType{
+    Bishop = "Bishop", King = "King", Knight = "Knight", Pawn = "Pawn", Queen = "Queen", Rook = "Rook"
 }

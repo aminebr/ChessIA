@@ -5,17 +5,18 @@ export class OccupiedTile extends Tile{
 
     pieceOnTile: Piece
 
-    constructor(tileCoordinateX: number,tileCoordinateY: number, pieceOnTile: Piece){
-    super(tileCoordinateX,tileCoordinateY)
+    constructor( pieceOnTile: Piece){
+    super()
     this.pieceOnTile = pieceOnTile
     }
+
     isOccupied() {
         return true
     }    
     
     
     getPiece() {
-        this.pieceOnTile
+        return this.pieceOnTile
     }
 
     

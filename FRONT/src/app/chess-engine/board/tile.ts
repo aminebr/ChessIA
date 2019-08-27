@@ -1,11 +1,8 @@
 export abstract class Tile{
-    state: string;
-    tileCoordinateX: number;
-    tileCoordinateY: number;
+    state: String;
+
     
-  constructor(tileCoordinateX: number,tileCoordinateY: number) {
-    this.tileCoordinateX = tileCoordinateX
-    this.tileCoordinateY = tileCoordinateY
+  constructor() {
     this.state = 'inactive'
   }
 
@@ -15,11 +12,12 @@ export abstract class Tile{
 
   abstract  getPiece()
 
-  getCoordinateX(){
-    return this.tileCoordinateX
-  }
+
+}
+export class TileArray{
+  tileRow : Tile[]
   
-  getCoordinateY(){
-    return this.tileCoordinateY
+  constructor(){
+    this.tileRow = Tile[8]
   }
 }

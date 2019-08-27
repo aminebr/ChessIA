@@ -6,7 +6,8 @@ export abstract class Player {
     canCastleRight : boolean
     canCastleLeft : boolean
     
-    constructor(parameters) {
-        
+    constructor() {
+        this.canCastleLeft = true
+        this.canCastleRight = true
     }
 }

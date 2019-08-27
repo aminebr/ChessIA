@@ -2,8 +2,17 @@ import { Tile } from './tile';
 
 export class EmptyTile extends Tile{
 
-    constructor(tileCoordinateX: number,tileCoordinateY: number) {
-        super(tileCoordinateX,tileCoordinateY)
+    static emptyTile : EmptyTile
+
+    static getEmptyTileInstance(){
+      if(this.emptyTile == null)
+          this.emptyTile = new EmptyTile()
+      return this.emptyTile
+    }
+
+
+    constructor() {
+      super()
       }
     
       isOccupied() {

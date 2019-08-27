@@ -1,18 +1,17 @@
 import { Player } from '../player/player';
-import { pieceType } from './piece-type.enum';
+import {  PieceType } from './piece-type.enum';
 import { Board } from '../board/board';
 import { Move } from '../move/move';
-import { Tile } from '../board/tile';
+
 
 export abstract class Piece {
     
-    tile : Tile
+    
     pieceBelongsTo : Player
-    pieceType : pieceType
+    pieceType : PieceType
     firstMove : boolean
 
-    constructor(tile : Tile,pieceBelongsTo : Player,pieceType : pieceType, firstMove : boolean){
-        this.tile = tile
+    constructor(pieceBelongsTo : Player,pieceType : PieceType, firstMove : boolean){
         this.pieceBelongsTo = pieceBelongsTo
         this.pieceType = pieceType
         this.firstMove = firstMove    
@@ -30,9 +29,6 @@ export abstract class Piece {
         return this.pieceBelongsTo
     }
 
-    getPosition(){
-        return this.tile
-    }
 
     getPieceType(){
         return this.pieceType

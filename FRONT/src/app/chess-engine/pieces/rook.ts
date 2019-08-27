@@ -1,15 +1,13 @@
 import { Piece } from './piece';
+import { PieceType } from './piece-type.enum';
 import { Board } from '../board/board';
 import { Move } from '../move/move';
 import { Player } from '../player/player';
-import { PieceType } from './piece-type.enum';
 
-export class Pawn extends Piece{
+export class Rook extends Piece{
 
-
-    
     constructor(pieceBelongsTo : Player){
-        super(pieceBelongsTo,PieceType.Pawn,true)
+        super(pieceBelongsTo,PieceType.Rook,true)
     }
 
     calculateLegalMoves(board: Board) {
@@ -20,6 +18,4 @@ export class Pawn extends Piece{
     movePiece(move: Move) {
         throw new Error("Method not implemented.");
     }
-
-
 }
