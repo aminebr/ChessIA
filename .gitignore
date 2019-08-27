@@ -1,2 +1,2 @@
 # Don't track content of these folders
-FRONT/
+FRONT/node_modules
