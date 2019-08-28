@@ -1,5 +1,5 @@
 export abstract class Tile{
-    state: String;
+    state: string;
 
     
   constructor() {

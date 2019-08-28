@@ -10,6 +10,7 @@ export abstract class Piece {
     pieceBelongsTo : Player
     pieceType : PieceType
     firstMove : boolean
+    pieceLink : string
 
     constructor(pieceBelongsTo : Player,pieceType : PieceType, firstMove : boolean){
         this.pieceBelongsTo = pieceBelongsTo
@@ -32,5 +33,9 @@ export abstract class Piece {
 
     getPieceType(){
         return this.pieceType
+    }
+
+    getPieceLink(){
+        return this.pieceLink
     }
 }
