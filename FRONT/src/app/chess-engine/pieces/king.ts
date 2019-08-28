@@ -14,8 +14,32 @@ export class King extends Piece{
         else this.pieceLink = "assets/Chess_kdt45.svg"
     }
 
-    calculateLegalMoves(board: Board) {
-        throw new Error("Method not implemented.");
+    calculateLegalMoves(board: Board , x : number , y :number) {
+        let gameBoard = board.getGameBoard()
+        if(x >= 0 && x < 8 && y+1 >= 0 && y+1 < 8 )
+            gameBoard[x][y+1].setColor("green")
+
+        if(x >= 0 && x < 8 && y-1 >= 0 && y-1 < 8 )
+            gameBoard[x][y-1].setColor("green")
+
+        if(x+1 >= 0 && x+1 < 8 && y >= 0 && y < 8 )
+            gameBoard[x+1][y].setColor("green")
+
+        if(x-1 >= 0 && x-1 < 8 && y >= 0 && y < 8 )
+            gameBoard[x-1][y].setColor("green")
+
+        if(x+1 >= 0 && x+1 < 8 && y+1 >= 0 && y+1 < 8 )
+            gameBoard[x+1][y+1].setColor("green")
+
+        if(x-1 >= 0 && x-1 < 8 && y-1 >= 0 && y-1 < 8 )
+            gameBoard[x-1][y-1].setColor("green")
+
+        if(x+1 >= 0 && x+1 < 8 && y-1 >= 0 && y-1 < 8 )
+            gameBoard[x+1][y-1].setColor("green")
+
+        if(x-1 >= 0 && x-1 < 8 && y+1 >= 0 && y+1 < 8 )
+            gameBoard[x-1][y+1].setColor("green")
+
     }    
     
     

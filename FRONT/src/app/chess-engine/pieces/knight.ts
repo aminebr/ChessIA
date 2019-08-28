@@ -14,8 +14,31 @@ export class Knight extends Piece{
         else this.pieceLink = "assets/Chess_ndt45.svg"
     }
 
-    calculateLegalMoves(board: Board) {
-        throw new Error("Method not implemented.");
+    calculateLegalMoves(board: Board , x : number , y :number) {
+        let gameBoard = board.getGameBoard()
+        if(x+1 >= 0 && x+1 < 8 && y+2 >= 0 && y+2 < 8 )
+            gameBoard[x+1][y+2].setColor("green")
+
+        if(x+1 >= 0 && x+1 < 8 && y+2 >= 0 && y+2 < 8 )
+            gameBoard[x-1][y+2].setColor("green")
+
+        if(x+1 >= 0 && x+1 < 8 && y-2 >= 0 && y-2 < 8 )
+            gameBoard[x+1][y-2].setColor("green")
+
+        if(x-1 >= 0 && x-1 < 8 && y-2 >= 0 && y-2 < 8 )
+            gameBoard[x-1][y-2].setColor("green")
+
+        if(x+2 >= 0 && x+2 < 8 && y+1 >= 0 && y+1 < 8 )
+            gameBoard[x+2][y+1].setColor("green")
+
+        if(x-2 >= 0 && x-2 < 8 && y+1 >= 0 && y+1 < 8 )
+            gameBoard[x-2][y+1].setColor("green")
+
+        if(x-2 >= 0 && x-2 < 8 && y-1 >= 0 && y-1 < 8 )
+            gameBoard[x-2][y-1].setColor("green")
+
+        if(x+2 >= 0 && x+2 < 8 && y-1 >= 0 && y-1 < 8 )
+            gameBoard[x+2][y-1].setColor("green")
     }    
     
     

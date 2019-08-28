@@ -19,18 +19,12 @@ export class Board{
     emptyTile : EmptyTile
 
 
-    constructor(){
-        this.whitePlayer = new WhitePlayer()
-        this.blackPlayer = new BlackPlayer()
+    constructor(whitePlayer : WhitePlayer,blackPLayer : BlackPlayer){
+        this.whitePlayer = whitePlayer
+        this.blackPlayer = blackPLayer
         this.nextPlayerToMove = this.whitePlayer
         this.initGameBoard()
         this.arrangeTheBoard()
-        
-        
-
-
-
-
     }
 
     getGameBoard(){
@@ -55,38 +49,38 @@ export class Board{
         this.gameBoard[5][1] = new OccupiedTile(new Pawn(this.whitePlayer))
         this.gameBoard[6][1] = new OccupiedTile(new Pawn(this.whitePlayer))
         this.gameBoard[7][1] = new OccupiedTile(new Pawn(this.whitePlayer))
-        this.gameBoard[0][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[1][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[2][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[3][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[4][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[5][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[6][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[7][2] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[0][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[1][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[2][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[3][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[4][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[5][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[6][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[7][3] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[0][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[1][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[2][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[3][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[4][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[5][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[6][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[7][4] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[0][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[1][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[2][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[3][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[4][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[5][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[6][5] = EmptyTile.getEmptyTileInstance()
-        this.gameBoard[7][5] = EmptyTile.getEmptyTileInstance()
+        this.gameBoard[0][2] = new EmptyTile()
+        this.gameBoard[1][2] = new EmptyTile()
+        this.gameBoard[2][2] = new EmptyTile()
+        this.gameBoard[3][2] = new EmptyTile()
+        this.gameBoard[4][2] = new EmptyTile()
+        this.gameBoard[5][2] = new EmptyTile()
+        this.gameBoard[6][2] = new EmptyTile()
+        this.gameBoard[7][2] = new EmptyTile()
+        this.gameBoard[0][3] = new EmptyTile()
+        this.gameBoard[1][3] = new EmptyTile()
+        this.gameBoard[2][3] = new EmptyTile()
+        this.gameBoard[3][3] = new EmptyTile()
+        this.gameBoard[4][3] = new EmptyTile()
+        this.gameBoard[5][3] = new EmptyTile()
+        this.gameBoard[6][3] = new EmptyTile()
+        this.gameBoard[7][3] = new EmptyTile()
+        this.gameBoard[0][4] = new EmptyTile()
+        this.gameBoard[1][4] = new EmptyTile()
+        this.gameBoard[2][4] = new EmptyTile()
+        this.gameBoard[3][4] = new EmptyTile()
+        this.gameBoard[4][4] = new EmptyTile()
+        this.gameBoard[5][4] = new EmptyTile()
+        this.gameBoard[6][4] = new EmptyTile()
+        this.gameBoard[7][4] = new EmptyTile()
+        this.gameBoard[0][5] = new EmptyTile()
+        this.gameBoard[1][5] = new EmptyTile()
+        this.gameBoard[2][5] = new EmptyTile()
+        this.gameBoard[3][5] = new EmptyTile()
+        this.gameBoard[4][5] = new EmptyTile()
+        this.gameBoard[5][5] = new EmptyTile()
+        this.gameBoard[6][5] = new EmptyTile()
+        this.gameBoard[7][5] = new EmptyTile()
         this.gameBoard[0][6] = new OccupiedTile(new Pawn(this.blackPlayer))
         this.gameBoard[1][6] = new OccupiedTile(new Pawn(this.blackPlayer))
         this.gameBoard[2][6] = new OccupiedTile(new Pawn(this.blackPlayer))

@@ -16,8 +16,21 @@ export class Pawn extends Piece{
         else this.pieceLink = "assets/Chess_pdt45.svg"
     }
 
-    calculateLegalMoves(board: Board) {
-        throw new Error("Method not implemented.");
+    calculateLegalMoves(board: Board , x : number , y :number)  {
+        let gameBoard = board.getGameBoard()
+        if ( this.getPieceBelongsTo() == board.whitePlayer){
+            
+            gameBoard[x][y+1].setColor("green")
+            if(this.isFirstMove()){
+                gameBoard[x][y+2].setColor("green")
+            }
+        }
+        else {
+            gameBoard[x][y-1].setColor("green")
+            if(this.isFirstMove()){
+                gameBoard[x][y-2].setColor("green")
+            }
+        }
     }    
     
     
