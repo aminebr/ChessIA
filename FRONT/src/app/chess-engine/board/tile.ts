@@ -14,10 +14,4 @@ export abstract class Tile{
 
 
 }
-export class TileArray{
-  tileRow : Tile[]
-  
-  constructor(){
-    this.tileRow = Tile[8]
-  }
-}
+

@@ -1,7 +1,7 @@
 <div style="display: inline-block;" *ngFor="let row of gameBoard ; let x=index" >
-  <div style="margin: 0;width:60px;height:60px;"  *ngFor = "let tile of row ; let y = index"> 
+  <div style="margin: 0;width:60px;height:60px;"   *ngFor = "let tile of row ; let y = index"> 
  
-     <svg-icon src = "{{ tile.getPiece() ? tile.getPiece().getPieceLink() : ''}}"  ></svg-icon>
+     <div (click)="triggerChangeState(x,y)"><svg-icon   src = "{{ tile.getPiece() ? tile.getPiece().getPieceLink() : 'assets/Chess_1lt26.svg'}}"  ></svg-icon></div>
   </div>
 </div>
 

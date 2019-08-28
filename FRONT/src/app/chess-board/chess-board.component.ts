@@ -12,7 +12,8 @@ export class ChessBoardComponent implements OnInit {
 
   board : Board
   gameBoard : Tile[][]
-  
+  tileXcoordinate : number
+  tileYcoordinate : number
   
   constructor() { }
 
@@ -21,9 +22,17 @@ export class ChessBoardComponent implements OnInit {
     this.gameBoard = this.board.getGameBoard()
   }
 
-  triggerChangeState(){
-    this.gameBoard[4][4] = this.gameBoard[1][1];
-    this.gameBoard[1][1]= EmptyTile.getEmptyTileInstance();
+  triggerChangeState(x : number , y : number){
 
+    if(this.tileXcoordinate == null){
+      this.tileXcoordinate = x
+      this.tileYcoordinate = y
+      }
+    else{
+      this.gameBoard[x][y] = this.gameBoard[this.tileXcoordinate][this.tileYcoordinate]
+      this.gameBoard[this.tileXcoordinate][this.tileYcoordinate] = EmptyTile.getEmptyTileInstance()
+      this.tileXcoordinate = null
+      this.tileYcoordinate = null
+      }
   }
 }
